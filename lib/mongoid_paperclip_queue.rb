@@ -10,7 +10,7 @@ module Mongoid::PaperclipQueue
   
     class Queue
       
-      # @queue = :paperclip
+      @queue = :paperclip
       
       def self.enqueue(klass,field,id,*parents)
         ::Resque.enqueue(self,klass,field,id,*parents)
